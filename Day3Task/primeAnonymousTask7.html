@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Return all the prime numbers in an array using anonymous function.
+        const numbers = [2, 3, 5, 7, 8, 11, 12, 13, 17];
+            const isPrime = function(num) {
+                if (num <= 1) return false;
+                if (num <= 3) return true;
+                
+                if (num % 2 === 0 || num % 3 === 0) return false;
+                
+                for (let i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) return false;
+                }
+                
+                return true;
+            };
+                const findPrimesInArray = function(arr) {
+                return arr.filter(num => isPrime(num));
+                };
+            
+            const primeNumbers = findPrimesInArray(numbers);
+            console.log(primeNumbers);
+    </script>
+</body>
+</html>

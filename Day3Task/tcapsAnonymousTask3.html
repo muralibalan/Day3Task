@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //Convert all the strings to title caps in a string array using anonymous function.
+
+        let titleCapsArray=function(arr){
+                        let result=[];
+                        for(let i=0;i<arr.length;i++)
+                        {
+                            let words=arr[i].split(" ");
+                            for(let j=0;j<words.length;j++){
+                                words[j]=words[j][0].toUpperCase()+words[j].substring(1);
+                            }
+                            result.push(words.join(" "));
+                        }
+                        return result;
+                    }
+            console.log(titleCapsArray(string=["murali","soundarya","adhishtra","aadhiran"]));
+    </script>
+</body>
+</html>

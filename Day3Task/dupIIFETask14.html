@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Remove duplicates from an array using IIFE function.
+            const originalArray = [1, 2, 2, 3, 4, 4, 5];
+
+            const deduplicatedArray = (function(arr) {
+            return arr.filter((value, index, self) => self.indexOf(value) === index);
+            })(originalArray);
+
+            console.log(deduplicatedArray);
+
+    </script>
+</body>
+</html>

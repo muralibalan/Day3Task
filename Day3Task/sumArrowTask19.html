@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Sum of all numbers in an array using Arrow funciton.
+
+            const numbers = [1, 2, 3, 4, 5];
+
+            const sumArray = (arr) => {
+            let sum = 0;
+            
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            
+            return sum;
+            };
+
+            const totalSum = sumArray(numbers);
+            console.log(totalSum);
+
+    </script>
+</body>
+</html>

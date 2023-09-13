@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Return all the palindromes in an array using anonymous function.
+        const isPalindrome = function(str) {
+            str = str.toLowerCase().replace(/[^a-z0-9]/g, ''); // (Remove non-alphanumeric characters and convert to lowercase)
+            const reversedStr = str.split('').reverse().join('');
+            return str === reversedStr;
+        };
+        
+        const findPalindromesInArray = function(arr) {
+            return arr.filter(str => isPalindrome(str));
+        };
+        
+        const words = ['radar', 'hello', 'level', 'world', 'deified', '12321'];
+        const palindromeWords = findPalindromesInArray(words);
+        console.log(palindromeWords);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // Return all the palindromes in an array using Arrow funciton.
+
+            const words = ["racecar", "hello", "level", "world", "deified", "12321"];
+
+            const findPalindromes = (arr) => {
+            const isPalindrome = (str) => {
+                str = str.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove non-alphanumeric characters and convert to lowercase
+                const reversedStr = str.split('').reverse().join('');
+                return str === reversedStr;
+            };
+
+            const palindromeWords = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                if (isPalindrome(arr[i])) {
+                palindromeWords.push(arr[i]);
+                }
+            }
+
+            return palindromeWords;
+            };
+
+            const palindromeWords = findPalindromes(words);
+            console.log(palindromeWords);
+    </script>
+</body>
+</html>
